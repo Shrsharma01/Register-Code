@@ -1,0 +1,41 @@
+<div class="reg">
+    <img style="width: 100%;height: 800px;" src="https://www.loginradius.com/blog/start-with-identity/static/3b4c33cef1861297f7da778dff9074a7/a3513/login-security.png">
+    <div class="col-5 container " style="margin-top: 30px; height: 600px;">
+        <br><br> 
+        <h3 style="font-family: Brush Script MT, Brush Script Std, cursive; text-align: center; color: whitesmoke; font-size: 36px;"> Register Form </h3>
+        <hr style="width:20%; margin-left:40%; border-width: 3px; border-color: whitesmoke;">
+        
+
+        <form [formGroup]="service.formModel" (ngSubmit)="handleRegister()">
+
+            <div class="form-group required">
+                <label style="color: whitesmoke;">Username</label>
+                <input type="text" class="form-control" formControlName="Username" placeholder="user name">
+                <span *ngIf="formSubmit && formControl.Username.errors" style="color: red;">Valid User Name required</span>
+            </div>
+
+            <div class="form-group required">
+                <label style="color: whitesmoke;">Email</label>
+                <input type="email" class="form-control" formControlName="Email" placeholder="email">
+                <span *ngIf="formSubmit && formControl.Email.errors" style="color: red;">Valid Email required</span>
+            </div>
+
+            <div class="form-group required">
+                <label style="color: whitesmoke;">Full Name</label>
+                <input type="text" class="form-control" formControlName="FullName" placeholder="full name">
+                <span *ngIf="formSubmit && formControl.FullName.errors" style="color: red;">Valid Full Name required</span>
+            </div>
+
+            <div class="form-group required">
+                <label style="color: whitesmoke;"> Password </label>
+                <input type="password" class="form-control" formControlName="Password" placeholder="password">
+                <span *ngIf="formSubmit && formControl.Password.errors" style="color: red;">Valid Password required</span>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn" style="color: whitesmoke;">Register</button>
+            </div>
+
+        </form>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+.reg .container{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+
+.container{
+    margin-top : 30px;
+    background:rgba(1,1,1,0.5);
+    height: 700px;
+}
+
+.container button:hover{
+    
+    background-color:rgba(1,1,1,0.6) ;
+}
